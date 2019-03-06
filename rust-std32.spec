@@ -10,12 +10,12 @@
 %global _find_debuginfo_opts -g
 
 Name:           rust-std32
-Version:        1.25.0
-Release:        4
+Version:        1.33.0
+Release:        5
 Summary:        The Rust Standard Library
 License:        Apache-2.0 BSD-2-Clause BSD-3-Clause ISC MIT
 URL:            https://www.rust-lang.org
-Source0:        https://static.rust-lang.org/dist/rust-std-1.25.0-i586-unknown-linux-gnu.tar.xz
+Source0:        https://static.rust-lang.org/dist/rust-std-1.33.0-i586-unknown-linux-gnu.tar.xz
 
 %description
 Rust is a systems programming language that runs blazingly fast, prevents
@@ -26,8 +26,8 @@ segfaults, and guarantees thread safety.
 %setup -q -n rust-std-%{version}-i586-unknown-linux-gnu
 
 %install
-mkdir -p %{buildroot}/usr/lib64/rustlib
-cp -a rust-std-i586-unknown-linux-gnu/lib/rustlib/i586-unknown-linux-gnu/ %{buildroot}/usr/lib64/rustlib/
+mkdir -p %{buildroot}/usr/lib64/
+cp -a rust-std-i586-unknown-linux-gnu/lib/rustlib %{buildroot}/usr/lib64/
 
 # The shared libraries should be executable for debuginfo extraction.
 find %{buildroot}/usr/lib64/rustlib/ -type f -name '*.so' -exec chmod -v +x '{}' '+'
