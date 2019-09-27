@@ -10,12 +10,12 @@
 %global _find_debuginfo_opts -g
 
 Name:           rust-std32
-Version:        1.37.0
-Release:        8
+Version:        1.38.0
+Release:        9
 Summary:        The Rust Standard Library
 License:        Apache-2.0 BSD-2-Clause BSD-3-Clause ISC MIT
 URL:            https://www.rust-lang.org
-Source0:        https://static.rust-lang.org/dist/rust-std-1.37.0-i586-unknown-linux-gnu.tar.xz
+Source0:        https://static.rust-lang.org/dist/rust-std-1.38.0-i586-unknown-linux-gnu.tar.xz
 
 %description
 Rust is a systems programming language that runs blazingly fast, prevents
