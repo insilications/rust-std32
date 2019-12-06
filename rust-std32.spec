@@ -11,7 +11,7 @@
 
 Name:           rust-std32
 Version:        1.39.0
-Release:        10
+Release:        11
 Summary:        The Rust Standard Library
 License:        Apache-2.0 BSD-2-Clause BSD-3-Clause ISC MIT
 URL:            https://www.rust-lang.org
