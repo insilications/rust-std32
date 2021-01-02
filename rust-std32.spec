@@ -10,10 +10,10 @@
 %global _find_debuginfo_opts -g
 
 Name     : rust-std32
-Version  : 1.48.0
-Release  : 18
+Version  : 1.49.0
+Release  : 19
 URL      : https://www.rust-lang.org
-Source0  : https://static.rust-lang.org/dist/rust-std-1.48.0-i586-unknown-linux-gnu.tar.xz
+Source0  : https://static.rust-lang.org/dist/rust-std-1.49.0-i586-unknown-linux-gnu.tar.xz
 Summary  : The Rust Standard Library
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause ISC MIT
 
