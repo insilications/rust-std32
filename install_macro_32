@@ -1,0 +1,14 @@
+./install.sh --prefix=%{?buildroot:%{buildroot}}/usr/ --disable-ldconfig --components=rust-std-i686-unknown-linux-gnu --without=rust-docs --verbose
+# shell completion for bash
+# install -dm 0755 %{buildroot}/usr/share/bash-completion/completions
+# install -m0644  %{buildroot}/usr/etc/bash_completion.d/cargo %{buildroot}/usr/share/bash-completion/completions/cargo
+rm -rf %{buildroot}/usr/etc/bash_completion.d/cargo
+#
+find %{?buildroot:%{buildroot}} -name "install.log" -exec rm {} \;
+find %{?buildroot:%{buildroot}} -type f -name '*manifest-*' -exec sed -i 's/\/builddir\/build\/BUILDROOT\/rust-std32-[0-9]-[0-9]*\.x86_64//g' {} \;
+#pushd %{?buildroot:%{buildroot}}
+#rg -e "/builddir/build/BUILDROOT/"
+#popd
+#rust-std32-1-90.x86_64
+find %{buildroot}/usr/lib/rustlib/ -maxdepth 1 -type f -exec rm -v '{}' '+'
+#-not -name '*.gcno'
